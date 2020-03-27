@@ -1,0 +1,31 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+# automatically connect the wired interface
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+
+auto usb0
+allow-hotplug usb0
+iface usb0 inet dhcp
+
+# automatically connect the wireless interface, but disable it for now
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
+wireless-power off
+
+# create a bridge with both wired and wireless interfaces
+auto br0
+iface br0 inet static
+        address 10.3.141.1
+        netmask 255.255.255.0
+        bridge_ports eth0 wlan0
+        bridge_fd 0
+        bridge_stp off
