@@ -68,7 +68,7 @@ sudo apt install dnsmasq
 interface=br0
 
 # which dhcp IP-range to use for dynamic IP-adresses
-dhcp-range=192.168.66.50,192.168.66.150,12h
+dhcp-range=10.3.141.100,10.3.141.150,12h
 ```
 
 After this you will want to configure the access point for devices to connect to your system, this will be done with hostapd.
