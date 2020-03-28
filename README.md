@@ -19,7 +19,7 @@ My goal is to let the pi provide a DHCP address to devices over both the etherne
 
 To start, you will need to flash your SD card with the latest version of raspbian. Once this is complete you can go ahead and get started.
 
-I personaly plan to access this system over SSH, and over the internet. A piece of software you can use for this is provided by remote.it, this will install on the system and then show up in the console which you can then use to connect to the device over SSH. This is very handy as the ZTE modem does not allow port forwarding.
+I personaly plan to access this system over SSH, and over the internet. A piece of software you can use for this is provided by https://remote.it, this will install on the system and then show up in the console which you can then use to connect to the device over SSH. This is very handy as the ZTE modem does not allow port forwarding.
 
 Once the pi is setup and ready to go you can login and start getting the system configured. 
 
@@ -129,7 +129,7 @@ sudo iptables-persistent save
 sudo reboot
 ```
 
-Once this is complete. you should be able to give a DHCP address to your camera. You will want to run the command "arp -a" to look for anything that has an address on your network, one of these should be the camera. (if you cannot find the camera, connect with a windows machine to the hotspot and search for the camera this way)
+Once this is complete. you should be able to give a DHCP address to your camera. You will want to run the command ```arp -a``` to look for anything that has an address on your network, one of these should be the camera. (if you cannot find the camera, connect with a windows machine to the hotspot and search for the camera this way)
 
 with the camera connected (and you have logged in and set a password) you should be able to now connect and stream this camera. One thing i have found helpful is to use screen.
 
@@ -148,3 +148,13 @@ ffmpeg -rtsp_transport udp -i rtsp://admin:123456@10.3.141.10:554//h264Preview_0
 
 to get out of the screen session you will want to hit ```cntl + a``` ```cntrl + d``` this will disconnect you from the session, to re connect you can type ```screen -r SCREENSESSIONNUMBER``` which the screen session number is gathered by running ```screen -list```
 
+
+
+**Sources**
+
+```
+https://snikt.net/blog/2019/06/22/building-an-lte-access-point-with-a-raspberry-pi/
+https://github.com/niski84/t-mobile-throttle-defeat
+https://support.reolink.com/hc/en-us/articles/360007010473-How-to-Live-View-Reolink-Cameras-via-VLC-Media-Player
+https://www.raspberrypi.org/forums/viewtopic.php?t=207639
+```
