@@ -1,29 +1,30 @@
-**Building an LTE hostspot / video streaming device using an Raspberry pi a USB ZTE modem with a Tmobile sim card and a Reo Link IP camera.**
+**Building an LTE hostspot / video streaming device using an Raspberry pi a USB ZTE modem with a T-mobile sim card and a Reo Link IP camera.**
 
-My goal for this project was to create a camera feed and wifi hotspot to use at our local RC track to provide internet connection for the control computer as well as provide a camera feed to upload to the livetime scoring system.
+My goal for this project was to create a camera streaming device with a wifi hotspot to use at our local RC track to provide internet connection for the control computer as well as provide a camera feed to upload to the livetime scoring system.
 
-**Hardware i used:**
+**Hardware I used:**
 
 Raspberry Pi 3b
 ZTE LTE USB Modem
 Sandisk 64G SD card
 ReoLink bullet IP camera
 Ethernet cable
-Power supply for both camera and pi
+Power supply for both the camera and pi
 
 **What I am trying to accomplish here:**
 
-My goal is to let the pi provide a DHCP address to devices over both the ethernet port and wifi so that devices can connect to the internet both over wifi and ethernet.
+My goal is to let the pi provide a DHCP addresses to devices over both the ethernet port and wifi so that devices can connect to the internet through both.
 
 **Setup:**
 
-To start, you will need to flash your SD card with the latest version of raspbian. Once this is complete you can go ahead and get started.
+To start, you will need to flash your SD card with the latest version of raspbian. Once this is complete you can go to the next step.
 
-I personaly plan to access this system over SSH, and over the internet. A piece of software you can use for this is provided by https://remote.it, this will install on the system and then show up in the console which you can then use to connect to the device over SSH. This is very handy as the ZTE modem does not allow port forwarding.
+
+I personaly plan to access this system over SSH, and over the internet. A piece of software you can use for this is provided by https://remote.it, this will install on the system and show up in the console which you can then use to connect to the device over SSH. This is very handy as the ZTE modem does not allow port forwarding.
 
 Once the pi is setup and ready to go you can login and start getting the system configured. 
 
-start by installing the bridge utils and configuring a bridge on the system.
+Start by installing the bridge utils and configuring a bridge on the system.
 
 ```
 sudo apt install bridge-utils
