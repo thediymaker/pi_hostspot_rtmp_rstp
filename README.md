@@ -138,7 +138,9 @@ run
 
 once here you will want to run something similar, i have tested this with livetime scoring as well as twitch. Youtube should also work. You will want to adjust your settings to fit your needs but i have found this configuration works well.
 
+```
 ffmpeg -rtsp_transport udp -i rtsp://admin:123456@10.3.141.10:554//h264Preview_01_main -framerate 15 -video_size 1920x1080 -vcodec libx264 -maxrate 1984k -bufsize 10M -g 50 -codec:v copy -c:a aac -b:a 128k -f flv rtmp://live-phx.twitch.tv/app/streamkey
+```
 
-to get out of the screen session you will want to hit "cntl + a" "cntrl + d" this will disconnect you from the session, to re connect you can type screen -r SCREENSESSIONNUMBER which the screen session number is gathered by running "screen -list"
+to get out of the screen session you will want to hit ```"cntl + a"``` ```"cntrl + d"``` this will disconnect you from the session, to re connect you can type screen -r SCREENSESSIONNUMBER which the screen session number is gathered by running "screen -list"
 
