@@ -150,6 +150,12 @@ ffmpeg -rtsp_transport udp -i rtsp://admin:123456@10.3.141.10:554//h264Preview_0
 to get out of the screen session you will want to hit ```cntl + a``` ```cntrl + d``` this will disconnect you from the session, to re connect you can type ```screen -r SCREENSESSIONNUMBER``` which the screen session number is gathered by running ```screen -list```
 
 
+**Future changes**
+
+Going forward i plan to move away from the USB modem and go to a sixfab pi shield. This should be here next week so i will update this when the new parts arrive.
+
+I also plan to create a 3d printed housing for this device that will hold the pi, with the shield, a small oled screen to show status and have a spot for the antennas.
+
 
 **Sources**
 
