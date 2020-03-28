@@ -3,6 +3,7 @@
 My goal for this project was to create a camera feed and wifi hotspot to use at our local RC track to provide internet connection for the control computer as well as provide a camera feed to upload to the livetime scoring system.
 
 **Hardware i used:**
+
 Raspberry Pi 3b
 ZTE LTE USB Modem
 Sandisk 64G SD card
@@ -11,9 +12,11 @@ Ethernet cable
 Power supply for both camera and pi
 
 **What I am trying to accomplish here:**
+
 My goal is to let the pi provide a DHCP address to devices over both the ethernet port and wifi so that devices can connect to the internet both over wifi and ethernet.
 
 **Setup:**
+
 To start, you will need to flash your SD card with the latest version of raspbian. Once this is complete you can go ahead and get started.
 
 I personaly plan to access this system over SSH, and over the internet. A piece of software you can use for this is provided by remote.it, this will install on the system and then show up in the console which you can then use to connect to the device over SSH. This is very handy as the ZTE modem does not allow port forwarding.
@@ -77,6 +80,7 @@ systemctl enable hostapd
 ```
 
 **edit the hostapd file at /etc/hostapd/hostapd.conf**
+
 ```
 bridge=br0
 
